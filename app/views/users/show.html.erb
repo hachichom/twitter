@@ -1,5 +1,4 @@
-<h1>Tweets</h1>
-<%=link_to "New Tweet", new_tweet_path %>
+<h1><%= @user.email %></h1>
 <table class="table table-bordered">
 	<thead>
 		<tr>
@@ -8,8 +7,8 @@
 		</tr>
 	</thead>
 	<tbody>
-<% @tweets.each do |tweet| %>
-    <tr>
+<% @user.tweets.each do |tweet| %>
+  <tr>
    <td> <%= link_to tweet.user.email, user_path(tweet.user) %></td>
     <td><%= tweet.body %></td>
   </tr>
