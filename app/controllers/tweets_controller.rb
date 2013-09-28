@@ -5,7 +5,9 @@ class TweetsController < ApplicationController
  end
  	def new
     @tweet = Tweet.new
+
     @something = "hello world"
+
   end
 
   def create
