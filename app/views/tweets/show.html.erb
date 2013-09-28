@@ -1,0 +1,18 @@
+<%=link_to "New Tweet", new_tweet_path %>
+<h1>Tweet <%= @tweet.id %> </h1>
+<p> Created on: <%= @tweet.created_at.strftime("%m/%d/%Y") %> </p>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>email address</th>
+			<th>tweet</th>
+		</tr>
+	</thead>
+	<tbody>
+
+    <tr>
+   <td> <%= link_to @tweet.user.email, user_path(@tweet.user) %></td>
+    <td><%= @tweet.body %></td>
+  </tr>
+</tbody>
+</table>

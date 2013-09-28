@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Twitter</title>
-  <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
+  
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -11,17 +11,9 @@
 
 
 
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/">Twitter</a>
-      <ul class="nav">
-        <li class="active"><a href="/tweets">Tweets</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+
  <div class="container">
+  <%= link_to 'Home', root_path %>
  	<% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 <% else %>

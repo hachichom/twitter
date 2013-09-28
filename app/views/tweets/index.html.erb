@@ -5,6 +5,7 @@
 		<tr>
 			<th>email address</th>
 			<th>tweet</th>
+			<th> &nbsp; </th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12,6 +13,7 @@
     <tr>
    <td> <%= link_to tweet.user.email, user_path(tweet.user) %></td>
     <td><%= tweet.body %></td>
+    <td> <%= link_to 'Permalink', tweet_path(tweet) %> </td>
   </tr>
 <% end %>
 </tbody>

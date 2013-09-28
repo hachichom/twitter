@@ -1,7 +1,7 @@
 Twitter::Application.routes.draw do
   devise_for :users
   root 'tweets#index'
-  resources :tweets, only: [:new, :index, :create]
+  resources :tweets, only: [:new, :index, :create, :show]
 get 'users/:id' => 'users#show', as: 'user'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
